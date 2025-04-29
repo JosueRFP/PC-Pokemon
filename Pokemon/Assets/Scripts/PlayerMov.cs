@@ -9,6 +9,7 @@ public class PlayerMov : MonoBehaviour
     void Start()
     {
        rb = GetComponent<Rigidbody2D>();
+        GameController.instance.OnBattleCall.AddListener(InitializedBattle);
     }
 
     // Update is called once per frame
@@ -19,6 +20,14 @@ public class PlayerMov : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (GameController.instance.State.Equals(GameStates.BATTLE))
+              return;
+        
         rb.linearVelocity = movement * speed;
+    }
+
+    void InitializedBattle()
+    {
+        rb.linearVelocity = Vector2.zero;
     }
 }
