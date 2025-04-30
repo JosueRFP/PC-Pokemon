@@ -23,4 +23,10 @@ public class BattleController : MonoBehaviour
     {
         
     }
+
+    public void RunAway()
+    {
+        GameController.instance.OnBattleEnd.Invoke();
+        SceneManager.UnloadSceneAsync("Battle");
+    }
 }

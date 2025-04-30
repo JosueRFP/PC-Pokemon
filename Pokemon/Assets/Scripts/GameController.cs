@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour
     public static GameController instance;
     [SerializeField] GameStates _gameStates = GameStates.WORLD;
 
-    public UnityEvent OnBattleCall;
+    public UnityEvent OnBattleCall, OnBattleEnd;
     public GameStates State { get => _gameStates; set => _gameStates = value; }
     
 
@@ -30,6 +30,7 @@ public class GameController : MonoBehaviour
     private void Start()
     {// Aciono uma chamada de para quando o evento é acionado
         OnBattleCall.AddListener(SetBattleMode);
+        OnBattleEnd.AddListener(SetGameMode);
     }
 
     // Update is called once per frame
@@ -41,5 +42,9 @@ public class GameController : MonoBehaviour
     void SetBattleMode()
     {
         _gameStates = GameStates.BATTLE;
+    }
+    void SetGameMode() 
+    {
+        _gameStates = GameStates.WORLD;
     }
 }
