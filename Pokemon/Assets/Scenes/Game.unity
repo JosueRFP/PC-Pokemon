@@ -312,6 +312,10 @@ MonoBehaviour:
   OnBattleCall:
     m_PersistentCalls:
       m_Calls: []
+  OnBattleEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  player: {fileID: 2142652757}
 --- !u!4 &882362004
 Transform:
   m_ObjectHideFlags: 0
@@ -339,6 +343,7 @@ GameObject:
   - component: {fileID: 2132476506}
   - component: {fileID: 2132476505}
   - component: {fileID: 2132476508}
+  - component: {fileID: 2132476509}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -456,6 +461,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4b02f32eeaca7c4f9a9b656c795b7bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2132476509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132476504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65fd4930c6e5ff34a85e1f1206aa989b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attributes:
+  - name: Slime
+    life: 5
+    speed: 2
+    level: 3
+    physicalAttk: 2
+    specialAttk: 6
+    physicalDef: 2
+    specialDef: 4
 --- !u!1 &2142652751
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,6 +495,7 @@ GameObject:
   - component: {fileID: 2142652753}
   - component: {fileID: 2142652752}
   - component: {fileID: 2142652756}
+  - component: {fileID: 2142652757}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -632,6 +659,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
+--- !u!114 &2142652757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142652751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79cb9d0ee236ca744a0fa72f56d16ce9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attributes:
+  - name: JeyZ
+    life: 15
+    speed: 12
+    level: 5
+    physicalAttk: 5
+    specialAttk: 10
+    physicalDef: 6
+    specialDef: 6
+  - name: 
+    life: 0
+    speed: 0
+    level: 0
+    physicalAttk: 0
+    specialAttk: 0
+    physicalDef: 0
+    specialDef: 0
+  - name: 
+    life: 0
+    speed: 0
+    level: 0
+    physicalAttk: 0
+    specialAttk: 0
+    physicalDef: 0
+    specialDef: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -14,6 +14,11 @@ public class GameController : MonoBehaviour
     public UnityEvent OnBattleCall, OnBattleEnd;
     public GameStates State { get => _gameStates; set => _gameStates = value; }
     
+    [SerializeField] AllyStatus player;
+    Attributes[] enemy;
+
+    public AllyStatus Player { get => player; set => player = value; }
+    public Attributes[] Enemy { get => enemy; set => enemy = value; }
 
     /*public GameStates GetGameStates() 
     { 

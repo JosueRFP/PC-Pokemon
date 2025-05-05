@@ -268,8 +268,9 @@ GameObject:
   - component: {fileID: 78279672}
   - component: {fileID: 78279671}
   - component: {fileID: 78279670}
+  - component: {fileID: 78279673}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: EnemyBattle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -367,6 +368,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &78279673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78279669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7341fa1b9420fd74399561c353c2a242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &159373124
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,7 +616,7 @@ GameObject:
   - component: {fileID: 653886450}
   - component: {fileID: 653886451}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PlayerBattle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -725,6 +738,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79cb9d0ee236ca744a0fa72f56d16ce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attributes:
+  - name: 
+    life: 0
+    speed: 0
+    level: 0
+    physicalAttk: 0
+    specialAttk: 0
+    physicalDef: 0
+    specialDef: 0
 --- !u!1 &713938506
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,7 +1136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1151881068
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1300,12 +1322,12 @@ GameObject:
   - component: {fileID: 1591238549}
   - component: {fileID: 1591238548}
   m_Layer: 5
-  m_Name: Atack
+  m_Name: Tackle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1591238547
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1323,7 +1345,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1, y: 2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1591238548
@@ -1538,7 +1560,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1878207271
 RectTransform:
   m_ObjectHideFlags: 0
