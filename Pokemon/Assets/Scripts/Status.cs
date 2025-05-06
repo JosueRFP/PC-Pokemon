@@ -6,6 +6,9 @@ public class Attributes
 {
     [SerializeField] string name;
     [SerializeField] int life, speed, level, physicalAttk, specialAttk, physicalDef, specialDef;
+    [SerializeField] string[] starterMoves;
+
+    public string[] StarterMoves { get => starterMoves;}
 
     public bool TakeDamege(int damage)
     {
@@ -18,15 +21,23 @@ public class Attributes
 public abstract class Status : MonoBehaviour
 {
     [SerializeField] List<Attributes> attributes = new List<Attributes>();
+        Transform moves;
 
     public Attributes[] GetTroops()
     {
         return attributes.ToArray();
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected  void Start()
     {
-        
+        moves = transform.GetChild(0);
+        foreach (Attributes move in attributes)
+        {
+            foreach(string item in move.StarterMoves)
+            {// Instancia cada golpe de cada pokemon que existe na lista
+                Instantiate(GameController.instance.GetAttack(item), moves);
+
+            }
+        }
     }
 
     // Update is called once per frame

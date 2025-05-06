@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class EnemyStatus : Status
+public class MoveAttack : Move
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    protected new void Start()
+    void Start()
     {
-        base.Start();
+        
     }
 
     // Update is called once per frame

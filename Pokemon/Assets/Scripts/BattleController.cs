@@ -15,20 +15,14 @@ public enum Type
 [System.Serializable]
 public class Attack
 {
-    [SerializeField] Mode mode;
-    [SerializeField] Type type;
     [SerializeField] string name;
-    [SerializeField] int baseDamage;
-    [SerializeField] int accurancy;
-    [SerializeField] int pp;
 }
 
 public class BattleController : MonoBehaviour
 {
     public static BattleController instance; 
     public UnityEvent OnCharacterEnterEnd;
-
-
+  
     private void Awake()
     {
         instance = this;

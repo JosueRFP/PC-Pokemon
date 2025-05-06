@@ -20,12 +20,24 @@ public class GameController : MonoBehaviour
     public AllyStatus Player { get => player; set => player = value; }
     public Attributes[] Enemy { get => enemy; set => enemy = value; }
 
-    /*public GameStates GetGameStates() 
-    { 
-        return _gameStates; 
-    }*/
+
+    [Header("References")]
+    [SerializeField] GameObject[] attacks;
 
 
+    public GameObject GetAttack(string name)
+    {
+        foreach(var att in attacks)
+        {
+            if (att.name.Equals(name))
+            {
+                return att;
+            }
+
+        }
+        return null;
+    }
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {

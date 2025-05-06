@@ -316,6 +316,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   player: {fileID: 2142652757}
+  attacks:
+  - {fileID: 8388700127948194393, guid: 29b7b1cb0fcda7b4880e12b6dff0a55f, type: 3}
+  - {fileID: 454659147244877700, guid: f4bb9ca0085bbd545a4390f0706dbd16, type: 3}
+  - {fileID: 6183533114716899815, guid: e9fc2f3c7778e7440808eccef3bccaf1, type: 3}
+  - {fileID: 7723194978217288475, guid: 118238b967b4ed540b3564c9589db920, type: 3}
 --- !u!4 &882362004
 Transform:
   m_ObjectHideFlags: 0
@@ -330,6 +335,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2091549597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2091549598}
+  m_Layer: 0
+  m_Name: Moves
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2091549598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091549597}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2142652755}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2132476504
 GameObject:
@@ -482,6 +518,8 @@ MonoBehaviour:
     specialAttk: 6
     physicalDef: 2
     specialDef: 4
+    starterMoves:
+    - Water Gun
 --- !u!1 &2142652751
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,7 +681,8 @@ Transform:
   m_LocalPosition: {x: 2.9, y: 1.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2091549598}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2142652756
@@ -680,6 +719,9 @@ MonoBehaviour:
     specialAttk: 10
     physicalDef: 6
     specialDef: 6
+    starterMoves:
+    - Tackle
+    - Night Shade
   - name: 
     life: 0
     speed: 0
@@ -688,6 +730,7 @@ MonoBehaviour:
     specialAttk: 0
     physicalDef: 0
     specialDef: 0
+    starterMoves: []
   - name: 
     life: 0
     speed: 0
@@ -696,11 +739,12 @@ MonoBehaviour:
     specialAttk: 0
     physicalDef: 0
     specialDef: 0
+    starterMoves: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 2142652755}
-  - {fileID: 2132476507}
   - {fileID: 882362004}
+  - {fileID: 2132476507}
