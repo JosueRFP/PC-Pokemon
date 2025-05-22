@@ -41,6 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: GameBG
+    uniqueID: 2894155209
+    locked: 0
   - name: BattleBG
     uniqueID: 4255424079
     locked: 0
@@ -49,6 +52,9 @@ TagManager:
     locked: 0
   - name: BattleElements
     uniqueID: 3296515335
+    locked: 0
+  - name: GameElements
+    uniqueID: 351614557
     locked: 0
   m_RenderingLayers:
   - Default
